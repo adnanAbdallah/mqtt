@@ -1,0 +1,22 @@
+this project is simulation of a monitoring system of the electric counter at every home , 
+these counter are send data such as ( temperature, humidity, consumption....) , we use for the connection 
+purpose esp32 and the mqtt protcol.
+
+mqtt protocol is a connection protocol specific for the iot purpose it consist of node ,
+every node can act as publisher(send data) that publish a topic or subscriber (receive data on topic) , example 
+a node on home1\room1 this is a topic , home1\room2 this another topic the subscriber can subscribe to any topic 
+through a broker on the cloud (like mosquitto ,emqx...)
+
+in this project first we publish for testing from a java file his name is publisher.java to use the specific function
+of mqtt we must add the jar file "org.eclipse.paho.client.mqttv3-1.2.5.jar" to the path on the IDE,
+in the other side a file subscriber that subscribe to some topic can be run, and every message we get , we add it 
+to the database , using other jar file specefic to the database.
+
+in real applicaiton we use the esp32 to publish the data from the esp32 , and we can either subscribe to a topic .
+
+now we can control a relay in esp32 from our sever so the esp32 should act like subscriber to a topic that control
+specific actuators on esp32.
+
+
+
+
